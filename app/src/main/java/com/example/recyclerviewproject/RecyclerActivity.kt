@@ -13,6 +13,7 @@ import com.example.recyclerviewproject.recycler.productList
 class RecyclerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_recycler_view)
 
@@ -29,5 +30,6 @@ class RecyclerActivity : AppCompatActivity() {
         val adapter = RecyclerAdapter(productList)
 
         recyclerView.adapter = adapter
+
     }
 }
