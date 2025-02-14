@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 
 }
 
@@ -55,7 +56,7 @@ dependencies {
     implementation(libs.androidx.material3.android)
     implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.glide)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     val composeBom = platform("androidx.compose:compose-bom:2025.01.01")
@@ -64,7 +65,7 @@ dependencies {
 
     // Choose one of the following:
     // Material Design 3
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.material3)
 //    // or Material Design 2
 //    implementation("androidx.compose.material:material")
 //    // or skip Material Design and build directly on top of foundational components
@@ -73,13 +74,19 @@ dependencies {
 //    // such as input and measurement/layout
 //    implementation("androidx.compose.ui:ui")
 
+     //coil
+//    implementation(libs.coil.compose)
+//    implementation(libs.coil.network.okhttp.v310)
+
+    implementation(libs.coil.kt.coil.compose)
+
     // Android Studio Preview support
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
 
     // UI Tests
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+//    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+//    debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // Optional - Included automatically by material, only add when you need
     // the icons but not the material library (e.g. when using Material3 or a

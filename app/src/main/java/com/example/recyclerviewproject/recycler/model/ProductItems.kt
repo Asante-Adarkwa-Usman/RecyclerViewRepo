@@ -1,4 +1,4 @@
-package com.example.recyclerviewproject.recycler
+package com.example.recyclerviewproject.recycler.model
 
 data class ProductItems(
     val name:String,

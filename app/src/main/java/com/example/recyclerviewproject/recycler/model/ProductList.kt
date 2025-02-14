@@ -1,4 +1,4 @@
-package com.example.recyclerviewproject.recycler
+package com.example.recyclerviewproject.recycler.model
 
 val productList : List<ProductItems> = listOf(
     ProductItems (
