@@ -11,9 +11,13 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.recyclerviewproject.recycler.vm.ProductViewModel
 
 @Composable
-fun ProductListScreen(viewModel: ProductViewModel = viewModel()) {
+fun ProductListScreen(viewModel: ProductViewModel = viewModel() ) {
     val productList by viewModel.products.observeAsState(initial = emptyList())
 
+    // Fetch products when the screen appears
+    LaunchedEffect(viewModel) {
+        viewModel.getProductsData()
+    }
 
     Scaffold(
         topBar = { HeaderView() } // Header at the top
